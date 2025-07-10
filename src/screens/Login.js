@@ -19,8 +19,8 @@ const Login = () => {
     setError('');
 
     const url = isAdmin
-      ? 'http://localhost:5000/api/admin/admin-login'
-      : 'http://localhost:5000/api/loginuser';
+      ? 'https://gofood-3back.onrender.com/api/admin/admin-login'
+      : 'https://gofood-3back.onrender.com/api/loginuser';
 
     try {
       const response = await fetch(url, {

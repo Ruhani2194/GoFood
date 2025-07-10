@@ -30,7 +30,7 @@ const UploadFoodItem = () => {
     formData.append('image', image);
 
     try {
-      const response = await fetch('http://localhost:5000/api/admin/add-food-item', {
+      const response = await fetch('https://gofood-3back.onrender.com/api/admin/add-food-item', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

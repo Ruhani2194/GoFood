@@ -12,7 +12,7 @@ function ProfileDashboard() {
 
   const fetchProfiles = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/user-profiles');
+      const response = await fetch('https://gofood-3back.onrender.com/user-profiles');
       const data = await response.json();
       setProfiles(data);
     } catch (error) {
@@ -34,8 +34,8 @@ function ProfileDashboard() {
 
       const method = editProfileId ? 'PUT' : 'POST';
       const url = editProfileId
-        ? `http://localhost:5000/api/user-profiles/${editProfileId}`
-        : 'http://localhost:5000/api/user-profiles';
+        ? `https://gofood-3back.onrender.com/api/user-profiles/${editProfileId}`
+        : 'https://gofood-3back.onrender.com/api/user-profiles';
 
       const response = await fetch(url, {
         method,
@@ -65,7 +65,8 @@ function ProfileDashboard() {
   const handleDelete = async (id) => {
     console.log('Deleting profile with ID:', id); // Check if the ID is correct
     try {
-      const response = await fetch(`http://localhost:5000/api/user-profiles/${id}`, { method: 'DELETE' });
+      const response = await fetch(fetch(`https://gofood-3back.onrender.com/api/user-profiles/${id}`)
+, { method: 'DELETE' });
       if (response.ok) {
         setProfiles(profiles.filter(p => p._id !== id));
       } else {

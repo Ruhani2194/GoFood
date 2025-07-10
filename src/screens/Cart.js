@@ -27,7 +27,7 @@ export default function Cart() {
             return;
         }
         try {
-            let response = await fetch("http://localhost:5000/api/orderData", {
+            let response = await fetch("https://gofood-3back.onrender.com/api/orderData", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

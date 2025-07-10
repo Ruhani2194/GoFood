@@ -14,6 +14,13 @@ const app = express();
 const port = 5000;
 
 mongoDB();
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://mern-food-115f.onrender.com",
+  credentials: true
+}));
+
 
 app.use(express.json());
 

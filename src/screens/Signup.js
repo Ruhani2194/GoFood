@@ -18,7 +18,7 @@ export default function Signup() {
     e.preventDefault();
   
 
-    const response = await fetch("http://localhost:5000/api/createuser", {
+    const response = await fetch("https://gofood-3back.onrender.com/api/createuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

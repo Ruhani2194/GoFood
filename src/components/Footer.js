@@ -11,7 +11,7 @@ export default function Footer() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
 
-  const apiUrl = 'http://localhost:5000/api/reviews';
+  const apiUrl = 'https://gofood-3back.onrender.com/api/reviews';
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
