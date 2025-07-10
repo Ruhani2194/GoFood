@@ -38,7 +38,7 @@ function ProfileDashboard() {
         : 'https://gofood-3back.onrender.com/api/user-profiles';
 
       const response = await fetch(url, {
-        method,
+        method:DELETE,
         body: formData,
       });
 
