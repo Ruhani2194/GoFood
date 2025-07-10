@@ -12,7 +12,10 @@ function ProfileDashboard() {
 
   const fetchProfiles = async () => {
     try {
-      const response = await fetch('https://gofood-3back.onrender.com/user-profiles');
+      const response = await fetch(`https://gofood-3back.onrender.com/api/user-profiles/${id}`, {
+  method: 'DELETE'
+});
+
       const data = await response.json();
       setProfiles(data);
     } catch (error) {
@@ -38,7 +41,7 @@ function ProfileDashboard() {
         : 'https://gofood-3back.onrender.com/api/user-profiles';
 
       const response = await fetch(url, {
-        method:DELETE,
+        method,
         body: formData,
       });
 
