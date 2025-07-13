@@ -7,7 +7,7 @@ const FoodItem = require('./models/FoodItem');
 const User = require('./models/User'); 
 const mongoDB = require('./db');
 require('dotenv').config();
-const cors = require('cors');
+// const cors = require('cors');
 
 
 const app = express();
